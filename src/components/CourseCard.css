@@ -1,0 +1,105 @@
+/* Container (you should wrap cards in this) */
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card */
+.course-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 14px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Title */
+.course-card h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+/* Class range */
+.class-range {
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Lists */
+.course-card ul {
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.course-card li {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* Addon */
+.addon {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Button */
+.btn {
+  margin-top: 12px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background: linear-gradient(45deg, #3498db, #6dd5fa);
+  color: white;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #2980b9, #57c1eb);
+}
+
+/* 🔥 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .course-card {
+    padding: 15px;
+  }
+
+  .course-card h2 {
+    font-size: 18px;
+  }
+
+  .course-card li {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+/* 🔥 EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+  .course-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .course-card {
+    border-radius: 10px;
+  }
+}
