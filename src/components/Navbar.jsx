@@ -5,8 +5,14 @@ import "./Navbar.css";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+let user = null;
 
-  const user = JSON.parse(localStorage.getItem("user"));
+try {
+  user = JSON.parse(localStorage.getItem("user"));
+} catch (error) {
+  console.error("Invalid user data in localStorage");
+  user = null;
+}
 
   const handleLogout = () => {
     localStorage.removeItem("user");

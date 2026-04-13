@@ -10,9 +10,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(" Mongo Error:", err));
 
-// ✅ CORS (ONLY ONCE)
+import cors from "cors";
+
 app.use(cors({
-  origin: "http://localhost:3000"
+  origin: "https://student-growth-institute.onrender.com",
+  credentials: true
 }));
 
 app.use(express.json());
