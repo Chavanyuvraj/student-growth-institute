@@ -15,8 +15,8 @@ import AdmissionForm from "./components/AdmissionForm";
 import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
-  return (<>
-    <h1>Hello world</h1>
+  return (
+   
   <BrowserRouter >
       <Navbar />
       <Routes>
@@ -42,7 +42,7 @@ function App() {
         />
       </Routes>
     </BrowserRouter>
-    </>
+    
   );
 }
 
