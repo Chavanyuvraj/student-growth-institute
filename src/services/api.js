@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_BASE = "http://localhost:5000/api";
+const API = "https://backend-student-growth-institute.onrender.com/";
+
+axios.post(`${API}/api/auth/register`, data);
 
 // Register
 export const registerUser = (payload) => {
