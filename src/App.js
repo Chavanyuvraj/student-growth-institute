@@ -13,14 +13,11 @@ import SubjectMaterial from "./pages/SubjectMaterial";
 import StudyMaterials from "./pages/StudyMaterials";
 import AdmissionForm from "./components/AdmissionForm";
 import ForgotPassword from "./pages/ForgotPassword";
-  const basename =
-    window.location.hostname === "localhost"
-      ? "/"
-      : "/student-growth-institute";
+
 function App() {
   return (<>
     <h1>Hello world</h1>
-  <BrowserRouter basename={basename}>
+  <BrowserRouter >
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
