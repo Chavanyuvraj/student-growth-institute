@@ -18,7 +18,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/student-growth-institute">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
