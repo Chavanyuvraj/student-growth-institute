@@ -1,11 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 import { AdminRoute } from "./components/ProtectedRoute";
-
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -15,10 +13,14 @@ import SubjectMaterial from "./pages/SubjectMaterial";
 import StudyMaterials from "./pages/StudyMaterials";
 import AdmissionForm from "./components/AdmissionForm";
 import ForgotPassword from "./pages/ForgotPassword";
-
+  const basename =
+    window.location.hostname === "localhost"
+      ? "/"
+      : "/student-growth-institute";
 function App() {
-  return (
-    <BrowserRouter basename="/student-growth-institute">
+  return (<>
+    <h1>Hello world</h1>
+  <BrowserRouter basename={basename}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -43,6 +45,7 @@ function App() {
         />
       </Routes>
     </BrowserRouter>
+    </>
   );
 }
 
