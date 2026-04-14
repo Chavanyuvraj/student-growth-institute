@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://backend-student-growth-institute.onrender.com/";
+const API = "https://student-growth-institute-api.onrender.com";
 
 axios.post(`${API}/api/auth/register`, data);
 

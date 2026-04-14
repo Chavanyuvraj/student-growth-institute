@@ -13,7 +13,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
 import cors from "cors";
 
 app.use(cors({
-  origin: "https://student-growth-institute.onrender.com",
+  origin: "https://student-growth-institute-api.onrender.com",
   credentials: true
 }));
 
