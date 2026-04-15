@@ -27,12 +27,20 @@ export default function AdminUpload() {
     try {
       setLoading(true);
 
+      const API = "https://student-growth-institute-api.onrender.com";
+
       const res = await axios.post(
-        "http://localhost:5000/api/materials/upload",
+        `${API}/api/materials/upload`,
         formData,
-        
-      
+          {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  }
       );
+
+
+
 
       setMessage(res.data.message);
 
@@ -121,7 +129,7 @@ export default function AdminUpload() {
             onChange={(e) => setClassRange(e.target.value)}
           >
             <option value="">Select Class</option>
-            {[5,6,7,8,9,10,11,12].map((cls) => (
+            {[5, 6, 7, 8, 9, 10, 11, 12].map((cls) => (
               <option key={cls} value={cls}>
                 Class {cls}
               </option>

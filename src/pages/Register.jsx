@@ -14,16 +14,19 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const API = "https://student-growth-institute-api.onrender.com";
+
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        `${API}/api/auth/register`,
         { name, email, password }
       );
-localStorage.setItem("user", JSON.stringify(response.data.user));
-window.dispatchEvent(new Event("userChanged"));
+
+
       setMessage(response.data.message);
 
+
       if (response.data.message === "Registration successful") {
-           localStorage.setItem("user", JSON.stringify({ response:data. user }));
+        localStorage.setItem("user", JSON.stringify({ response: data.user }));
         navigate("/");
       }
 

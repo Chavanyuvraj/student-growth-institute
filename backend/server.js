@@ -2,18 +2,16 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
-
+//import cors from "cors";
 const app = express();
-
-// ✅ MongoDB
-mongoose.connect("mongodb://127.0.0.1:27017/studentDB")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch(err => console.log(" Mongo Error:", err));
 
-import cors from "cors";
+
 
 app.use(cors({
-  origin: "https://student-growth-institute-api.onrender.com",
+  origin: "https://student-growth-institute.onrender.com",
   credentials: true
 }));
 
@@ -33,5 +31,5 @@ app.use("/api/auth", authRoutes);
 app.get("/", (req, res) => {
   res.send("Server running");
 });
-
-app.listen(5000, () => console.log(" Server running on port 5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));

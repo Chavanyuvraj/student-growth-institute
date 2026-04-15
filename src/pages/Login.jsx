@@ -15,11 +15,12 @@ export default function Login() {
 
     try {
       const trimmedEmail = email.trim().toLowerCase();
+    const API = "https://student-growth-institute-api.onrender.com";
 
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
-        { email: trimmedEmail, password }
-      );
+const response = await axios.post(
+  `${API}/api/auth/login`,
+  { email: trimmedEmail, password }
+);
 
       const { message, user } = response.data; // ✅ get user correctly
       setMessage(message);
