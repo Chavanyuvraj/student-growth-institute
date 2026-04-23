@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
-//import cors from "cors";
+import("dotenv").config();
 const app = express();
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 
 app.use(cors({
-  origin: "https://student-growth-institute.onrender.com",
+  origin: "student-growth-institute.vercel.app",
   credentials: true
 }));
 
