@@ -4,7 +4,7 @@ const User = require("../models/user");
 const bcrypt = require("bcryptjs");
 
 
-// 👉 Signup
+
 router.post("/register", async (req, res) => {
   try {
     let { name, email, password } = req.body;
