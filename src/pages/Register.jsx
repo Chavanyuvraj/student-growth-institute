@@ -14,7 +14,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const API = "https://student-growth-institute-api.onrender.com";
+      const API =  process.env.REACT_APP_API_URL;
 
       const response = await axios.post(
         `${API}/api/auth/register`,
@@ -26,7 +26,7 @@ function Register() {
 
 
       if (response.data.message === "Registration successful") {
-        localStorage.setItem("user", JSON.stringify({ response: data.user }));
+        localStorage.setItem("user", JSON.stringify(response. data.user ));
         navigate("/");
       }
 

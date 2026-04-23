@@ -129,25 +129,53 @@ const Dashboard = () => {
 
 // ✅ Styles
 const styles = {
-  container: { display: "flex", height: "100vh", fontFamily: "Arial, sans-serif" },
-  sidebar: { width: "250px", background: "#1e293b", color: "white", padding: "20px", display: "flex", flexDirection: "column" },
-  sidebarTitle: { marginBottom: "30px", fontSize: "22px" },
-  sidebarList: { listStyle: "none", padding: 0 },
-  sidebarItem: { marginBottom: "15px", cursor: "pointer" },
-  sidebarButton: { 
-    width: "100%", 
-    padding: "10px", 
-    marginBottom: "15px", 
-    background: "#2563eb", 
-    border: "none", 
-    color: "white", 
-    borderRadius: "6px", 
+  container: {
+    display: "flex",
+    height: "100vh",
+    fontFamily: "Arial, sans-serif"
+  },
+  sidebar: {
+    width: "250px",
+    background: "#1e293b",
+    color: "white",
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column"
+  },
+  sidebarTitle: {
+    marginBottom: "30px",
+    fontSize: "22px"
+  },
+  sidebarList: {
+    listStyle: "none",
+    padding: 0
+  },
+  sidebarItem: {
+    marginBottom: "15px",
+    cursor: "pointer"
+  },
+  sidebarButton: {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "15px",
+    background: "#2563eb",
+    border: "none",
+    color: "white",
+    borderRadius: "6px",
     cursor: "pointer",
     fontWeight: "bold",
     transition: "0.2s",
   },
-  main: { flex: 1, padding: "30px", background: "#f8fafc", overflowY: "auto" },
-  header: { display: "flex", justifyContent: "space-between", alignItems: "center" },
+  main: {
+    flex: 1, padding: "30px",
+    background: "#f8fafc",
+    overflowY: "auto"
+  },
+  header: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
+  },
   userEmail: { color: "#334155" },
   logoutBtn: {
     padding: "8px 16px",
@@ -159,13 +187,42 @@ const styles = {
     fontWeight: "bold",
     transition: "0.2s",
   },
-  statsContainer: { display: "flex", gap: "20px", marginTop: "20px" },
-  card: { background: "#fff", padding: "20px", borderRadius: "10px", flex: 1, boxShadow: "0 4px 10px rgba(0,0,0,0.1)", textAlign: "center" },
-  table: { width: "100%", borderCollapse: "collapse", marginTop: "15px", background: "#fff", borderRadius: "8px", overflow: "hidden" },
+  statsContainer: {
+    display: "flex",
+    gap: "20px",
+    marginTop: "20px"
+  },
+  card: {
+    background: "#fff",
+    padding: "20px",
+    borderRadius: "10px",
+    flex: 1,
+    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+    textAlign: "center"
+  },
+  table: {
+    width: "100%",
+    borderCollapse: "collapse",
+    marginTop: "15px",
+    background: "#fff", borderRadius: "8px", overflow: "hidden"
+  },
   status: { fontWeight: "bold" },
-  actionButtons: { display: "flex", gap: "10px" },
-  approveBtn: { padding: "6px 12px", background: "green", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" },
-  rejectBtn: { padding: "6px 12px", background: "red", color: "white", border: "none", borderRadius: "4px", cursor: "pointer" },
+  actionButtons: {
+    display: "flex",
+    gap: "10px"
+  },
+  approveBtn: {
+    padding: "6px 12px",
+    background: "green", color: "white", border: "none", borderRadius: "4px", cursor: "pointer"
+  },
+  rejectBtn: {
+    padding: "6px 12px",
+    background: "red",
+    color: "white",
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer"
+  },
 };
 
 export default Dashboard;

@@ -15,13 +15,12 @@ export default function Login() {
 
     try {
       const trimmedEmail = email.trim().toLowerCase();
-    const API = "https://student-growth-institute-api.onrender.com";
+      const API = process.env.REACT_APP_API_URL;
 
-const response = await axios.post(
-  `${API}/api/auth/login`,
-  { email: trimmedEmail, password }
-);
-
+      const response = await axios.post(
+        `${API}/api/auth/login`,
+        { email: trimmedEmail, password }
+      );
       const { message, user } = response.data; // ✅ get user correctly
       setMessage(message);
 
@@ -73,12 +72,12 @@ const response = await axios.post(
         <button type="button" onClick={goToRegister} className="btn-login">
           Don't have an account? <span className="login-link-text">Register</span>
         </button>
-       <p
-  style={{ cursor: "pointer", color: "blue" }}
-  onClick={() => navigate("/forgot-password")}
->
-  Forgot Password?
-</p>
+        <p
+          style={{ cursor: "pointer", color: "blue" }}
+          onClick={() => navigate("/forgot-password")}
+        >
+          Forgot Password?
+        </p>
         {message && (
           <p style={{ color: message.includes("successful") ? "green" : "red" }}>
             {message}

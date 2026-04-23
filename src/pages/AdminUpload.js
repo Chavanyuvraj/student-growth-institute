@@ -27,7 +27,7 @@ export default function AdminUpload() {
     try {
       setLoading(true);
 
-      const API = "https://student-growth-institute-api.onrender.com";
+    const API = process.env.REACT_APP_API_URL;
 
       const res = await axios.post(
         `${API}/api/materials/upload`,
